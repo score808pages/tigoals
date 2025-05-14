@@ -5,7 +5,7 @@
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <meta content='#212121' name='theme-color'/>
     <meta content='#212121' name='msapplication-navbutton-color'/>
-    <link href='https://www.score808.my.id/image/favicon.ico' rel='icon' type='image/x-icon'/>
+    <link href='https://score808.my.id/image/favicon.ico' rel='icon' type='image/x-icon'/>
     <meta content='Tigoals Live streaming tracker for football matches and broadcast schedules, you can watch Premier League, Champions League and more.' name='description'/>
     <meta content='Tigoals Live - Score808 Football Stream' property='og:title'/>
     <link href='https://tigoals.my.id/' rel='canonical'/>
@@ -31,6 +31,7 @@
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto}
+    #liveStreamContainer{position:fixed;bottom:100px;right:15px;z-index:9999;display:flex;align-items:center;gap:10px;animation:pulse 1.8s infinite}#liveStreamBtn{background:red;color:#fff;padding:12px 20px;border-radius:50px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;text-decoration:none;box-shadow:0 4px 12px rgb(0 0 0 / .3);transition:transform 0.3s ease,background 0.3s ease}#liveStreamBtn:hover{background:#e60000;transform:scale(1.05)}#liveStreamBtn svg{width:20px;height:20px;fill:#fff}#closeBtn{background:#fff;color:red;border:2px solid red;font-size:16px;border-radius:50%;width:30px;height:30px;cursor:pointer;font-weight:700;line-height:26px;text-align:center;padding:0;transition:0.3s ease}#closeBtn:hover{background:red;color:#fff}@keyframes pulse{0%{box-shadow:0 0 0 0 rgb(255 0 0 / .4)}70%{box-shadow:0 0 0 15px #fff0}100%{box-shadow:0 0 0 0 #fff0}}@media (max-width:600px){#liveStreamBtn{font-size:13px;padding:10px 16px}#closeBtn{width:26px;height:26px;font-size:14px;line-height:22px}}
 	.logo-footer {opacity:0.5;color: #fff;text-align: center;bottom: 32px;left: calc(50% - 15px);position: absolute}
 a:link,a:visited,.widget_bottom h1,.widget_bottom .caption{color:#ffffff}.bg-rianseo{background:#131212}.widget_bottom{width:640px}
 	.widget_bottom h1{margin-top:16px;margin-bottom:0;font-family:Inter, sans-serif;font-size:18px;font-weight:700}
@@ -107,7 +108,21 @@ a:link,a:visited,.widget_bottom h1,.widget_bottom .caption{color:#ffffff}.bg-ria
 </div>
 
 </div>
-		<div class='logo-footer'>
+		 <div id="liveStreamContainer">
+  <a href="https://score808.my.id/live" id="liveStreamBtn" target="_blank" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M10 8.64v6.72L15.27 12 10 8.64M8 5v14l11-7L8 5z"/>
+    </svg>
+    Live Streaming
+  </a>
+  <button id="closeBtn">✕</button>
+</div>
+<script>
+document.getElementById("closeBtn").addEventListener("click", function () {
+  document.getElementById("liveStreamContainer").style.display = "none";
+});
+</script>
+<div class='logo-footer'>
 			<svg width='32' height='32' viewBox="0 0 24 24">
     <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
 </svg>
