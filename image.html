@@ -389,7 +389,7 @@ bgImage.src = proxy + '&t=' + Date.now(); // tambahkan timestamp supaya unik
 
       if (!selectedContent) return alert('Pilih artikel dulu.');
       const plainText = stripHtmlTags(selectedContent).trim().substring(0, 300);
-      const textWithPrefix = '🗞️ BERITA 808NEWS - ' + plainText + '\n\n#Olahraga #BeritaNasional #BreakingNews';
+      const textWithPrefix = '🚨BERITA 808NEWS - ' + plainText + '\n\n#Olahraga #BeritaNasional #Score #BreakingNews';
       navigator.clipboard.writeText(textWithPrefix).then(() => {
         alert('Berita berhasil disalin!');
       });
